@@ -1,0 +1,62 @@
+****
+
+npm install
+
+change database name and password
+
+   in util/database.js
+
+
+   change database name and password
+
+   for sending mail
+
+
+   in app.js
+
+
+npm start
+
+1.  change database name and password
+
+   in util/database.js
+
+2. GET METHOD:   get all schedule time
+
+http://localhost:3000/admin/schedule
+
+3. POST method:  add new schedule
+   send schedule date with time
+
+{
+   "schedule": "2021-04-4 02:03:03"
+}
+
+ http://localhost:3000/admin/add-schedule
+
+
+ 4.  GET METHOD:   get all schedule time of particular id
+
+ http://localhost:3000/admin/edit-schedule/1
+
+ 5. POST method: update specific schedule
+
+ {
+    "schedule":"2021-05-04 02:02:02",
+    "scheduleId":1
+}
+
+ http://localhost:3000/admin/edit-schedule/
+
+
+
+   
+6. POST METHOD: delete specific schedule
+
+{
+    "scheduleId":1
+}
+
+http://localhost:3000/admin/delete-schedule/
+
+

@@ -1,0 +1,66 @@
+2. GET METHOD:   get all users
+
+http://localhost:3000/admin/users
+
+3. POST method:  add new user
+   send schedule email and name
+
+{
+   "name": "chandan",
+   "email": "chandanbarnwal111@gmail.com"
+}
+
+ http://localhost:3000/admin/add-user
+
+
+ 4.  GET METHOD:   get user details of particular id
+
+ http://localhost:3000/admin/edit-user/1
+
+ 5. POST method: update specific user details
+
+ {
+    "name":"chandan kumar",
+    "email": "chandanbarnwal111@gmail.com"
+    "userId":1
+}
+
+ http://localhost:3000/admin/edit-user
+
+  
+6. POST METHOD: delete specific user
+
+{
+    "userId":1
+}
+
+http://localhost:3000/admin/delete-user
+
+
+7. GET METHOD: mail sent user list
+
+http://localhost:4000/admin/user-mail-sent
+
+
+
+7. GET METHOD: mail not sent user list
+
+http://localhost:4000/admin/user-mail-not-sent
+
+
+8. change the gmail password to send mail
+
+//email transport config
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+      user: 'chandanbarnwal111@gmail.com',
+      pass: '1'
+  }
+});
+
+
+
+
+
+
